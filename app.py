@@ -1,5 +1,6 @@
 import streamlit as st
 import webbrowser
+from app_analizing import run_analizing
 from app_speechers import run_speechers
 from app_title import run_title
 from app_top import run_top
@@ -28,6 +29,8 @@ def main():
         run_title()
     elif choice == menu[4]:
         pass
+    elif choice == menu[5]:
+        run_analizing()
 
 if __name__ == '__main__':
     main()
