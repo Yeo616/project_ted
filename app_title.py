@@ -101,6 +101,7 @@ def run_title():
 
    # 연도별 가장 많이 쓰인 단어
     year = sorted(df['year'].unique())
+    year.sort(reverse=True)
     year_selected = st.selectbox('연도 선택', year)
     
     if year_selected is not None:

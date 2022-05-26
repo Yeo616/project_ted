@@ -4,6 +4,7 @@ from app_analizing import run_analizing
 from app_speechers import run_speechers
 from app_title import run_title
 from app_top import run_top
+from app_year import run_year
 
 def main():
     st.header("Ted 관련 데이터 분석")
@@ -28,7 +29,7 @@ def main():
     elif choice == menu[3]:
         run_title()
     elif choice == menu[4]:
-        pass
+        run_year()
     elif choice == menu[5]:
         run_analizing()
 
