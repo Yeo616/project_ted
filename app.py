@@ -1,5 +1,6 @@
 import streamlit as st
 import webbrowser
+from PIL import Image
 from app_analizing import run_analizing
 from app_speechers import run_speechers
 from app_title import run_title
