@@ -9,6 +9,9 @@ from PIL import Image
 def run_title():
     df = pd.read_csv('data/ted_data_modified.csv',index_col=0)
 
+    st.image('https://ethos3.com/wp-content/uploads/2016/09/5-Types-of-TED-Talks.jpg')
+    st.markdown('****')
+    
     my_stopwords = STOPWORDS
     my_stopwords.add('make')
 

@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 # top ted 강연
 def run_top():
     df = pd.read_csv('data/ted_data_modified.csv', index_col=0)
+    st.image('https://cdn.mos.cms.futurecdn.net/Xfwn3VUhmDttDsxXmEqbw6-1200-80.jpg')
+    st.markdown('****')
 
     # 조회수 기준 top 100
     with st.expander('조회수 기준 top 100'):

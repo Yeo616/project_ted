@@ -8,21 +8,38 @@ from app_top import run_top
 from app_year import run_year
 
 def main():
-    st.header("Ted 관련 데이터 분석")
-    st.subheader('출처: Ted.com')
-    st.text('목적: 인기 ted 듣고싶은 사람, 키워드 검색')
-    st.text('총 데이터 개수: 5440')
 
-    url = 'https://www.ted.com/'
-    if st.button('Ted 페이지로 이동'):
-        webbrowser.open_new_tab(url)
-
-    st.text('-----------')
 
     menu = ['Home', 'Top Ted 강연', '연사별 강의내용', '강의 타이틀 분석', 'Ted 강연 빈도수' ,'데이터 추가 분석']
-    choice = st.sidebar.selectbox('메뉴 선택',menu)
+    choice = st.sidebar.radio('메뉴 선택',menu)
+    
+    col1,col2,col3 = st.columns([2,1,1])
+    with col1:
+        st.subheader("Ted 관련 데이터 분석")
+    
+    with col3:
+        if st.button('Ted 페이지로 이동'):
+            webbrowser.open_new_tab(url)
+
+ 
+    
     if choice == menu[0]:
-        pass
+        
+
+        url = 'https://media-exp1.licdn.com/dms/image/C4D1BAQGRCL25mnKg7g/company-background_10000/0/1519798430700?e=2147483647&v=beta&t=K82J81Djn2IRUlHASTPsclcw3qdZd-w10ZeRTv5Z7NY'
+        st.image(url)
+
+        
+        st.markdown('****')
+
+        st.write('출처: Ted.com')
+        st.write('목적: 인기 ted 듣고싶은 사람, 키워드 검색')
+        st.write('총 데이터 개수: 5440')
+
+        url = 'https://www.ted.com/'
+
+
+
     elif choice == menu[1]:
         run_top()
     elif choice == menu[2]:
