@@ -3,11 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def run_year():
-    df = pd.read_csv('data/ted_data_modified.csv',index_col=0)
     
-    url = 'https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/20736b4f-91ec-4016-86e6-965bb944e07d/DickCarpenter_2019x-embed.jpg?quality=89&w=320'
-    st.image(url)
+    st.write('연도별로 있었던 강연 수 체크 데이터')
 
+    st.markdown('****')
+    df = pd.read_csv('data/ted_data_modified.csv',index_col=0)
+       
     # 연도별 강의 보는 법
     year = sorted(df['year'].unique())
     year.sort(reverse = True)
@@ -28,7 +29,9 @@ def run_year():
 
     # 연도별 빈도수
     st.text(' ')
-    with st.expander('연도별 강의 빈도수(2022년은 현제 진행형)'):
+    with st.expander('연도별 강연 빈도수 그래프'):
+        st.write('(2022년은 현재 진행형)')
+
         b = df['year'].value_counts().to_frame().reset_index().sort_values('index')
         b.columns = ['year','counts']
 
@@ -40,14 +43,16 @@ def run_year():
         plt.show()
         st.pyplot(fig1)
 
-    with st.expander('연도별 빈도 수치 확인'):
+        
+
+    with st.expander('연도별 강연 빈도 수치 데이터 테이블'):
         b = df['year'].value_counts().to_frame().reset_index().sort_values('index')
         b.columns = ['year','counts']
         b = b.set_index('year')
         st.dataframe(b)
 
     # 월별 강의 빈도수
-    with st.expander('월별 강의 빈도수'):
+    with st.expander('월별 강연 빈도 그래프 '):
   
         a = df['month'].value_counts().to_frame().reset_index().sort_values('index')
         a.columns = ['month','counts']
@@ -60,7 +65,7 @@ def run_year():
         plt.title('Monthly ted frequency')
         st.pyplot(fig2)
 
-    with st.expander('월별 빈도 수치 확인'):
+    with st.expander('월별 강연 빈도 수치 데이터 테이블'):
         a = df['month'].value_counts().to_frame().reset_index().sort_values('index')
         a.columns = ['month','counts']
         a = a.set_index('month')

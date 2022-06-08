@@ -7,16 +7,19 @@ from PIL import Image
 
 
 def run_title():
+
     df = pd.read_csv('data/ted_data_modified.csv',index_col=0)
 
     st.image('https://ethos3.com/wp-content/uploads/2016/09/5-Types-of-TED-Talks.jpg')
+    st.write('타이틀에 주로 많이 사용되는 단어 표시: 조회수/좋아요 Top 강연별, 연/월별로 분류 ')
+    
     st.markdown('****')
     
     my_stopwords = STOPWORDS
     my_stopwords.add('make')
 
     # 타이틀에서 가장 많이 쓰인 단어
-    with st.expander('타이틀에서 가장 많이 쓰인 단어'):
+    with st.expander('강연 타이틀에서 가장 많이 쓰인 단어'):
         img = Image.open('data/title_total.png')
         st.image(img)
 
@@ -31,7 +34,7 @@ def run_title():
         # st.pyplot(fig1)
 
     # 조회수 top100개에서 많이 쓰인 단어
-    with st.expander('조회수 top100 타이틀에서 많이 쓰인 단어'):
+    with st.expander('조회수 top100 강연 타이틀에서 많이 쓰인 단어'):
         img = Image.open('data/title_views_top100.png')
         st.image(img)
  

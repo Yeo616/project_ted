@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 
 def run_speechers():
-    
+    st.subheader('연사별 강의내용 분류')
+    st.write('연사마다 강의한 횟수 통계 데이터')
+
     df = pd.read_csv('data/ted_data_modified.csv', index_col=0)
     # 연사별 강의 수
     with st.expander('연사별 강의수'):
