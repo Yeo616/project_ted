@@ -19,24 +19,33 @@ def main():
     
     with col3:
         if st.button('Ted 페이지로 이동'):
+            url = 'https://www.ted.com/'
             webbrowser.open_new_tab(url)
 
- 
-    
+
+  
     if choice == menu[0]:
         
 
-        url = 'https://media-exp1.licdn.com/dms/image/C4D1BAQGRCL25mnKg7g/company-background_10000/0/1519798430700?e=2147483647&v=beta&t=K82J81Djn2IRUlHASTPsclcw3qdZd-w10ZeRTv5Z7NY'
-        st.image(url)
+        url1 = 'https://media-exp1.licdn.com/dms/image/C4D1BAQGRCL25mnKg7g/company-background_10000/0/1519798430700?e=2147483647&v=beta&t=K82J81Djn2IRUlHASTPsclcw3qdZd-w10ZeRTv5Z7NY'
+        st.image(url1)
 
-        
+        with st.expander('데이터 컬럼 설명'):
+            st.write('- TItle: 타이틀')
+            st.write('- author: 연사')
+            st.write('- views: 조회수')
+            st.write('- likes: 좋아요')
+            st.write('- link: 링크')
+            st.write('- year: 강연 연도')
+            st.write('- month: 강연달')
+  
         st.markdown('****')
 
         st.write('출처: Ted.com')
         st.write('취지:ted 관련 데이터 셋으로 연도별 강연 빈도수, 연사별, 강연 타이틀 분석  ')
         st.write('총 데이터 개수: 5440')
 
-        url = 'https://www.ted.com/'
+
 
 
 
