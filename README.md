@@ -21,7 +21,7 @@
 - 데이터 셋의 출처는:
 - 미국의 익명 직장 및 상사 평가 사이트인 글래스도어이며, Data Analyst에 관련한 모집공고의 데이터입니다.
 - 데이터 출처: https://www.kaggle.com/datasets/ashishjangra27/ted-talks?select=data.csv
-- 결과물: www.ec2-3-34-129-145.ap-northeast-2.compute.amazonaws.com:8504/
+- 결과물: http://ec2-3-34-129-145.ap-northeast-2.compute.amazonaws.com:8502/
 
 </br>
 
