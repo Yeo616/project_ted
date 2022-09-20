@@ -30,7 +30,8 @@
 - **AWS** 
   AWS EC2에서 보안(방화벽) 항목에서 포트 허용 작업을 했습니다.
   백그라운드로 실행 설정을 하였습니다: 
-  - `$ nohup streamlit run app.py &`
+
+`$ nohup streamlit run app.py &``
 
 </br>
 
