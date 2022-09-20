@@ -13,7 +13,7 @@
 </br>
 
 - 하기 분류에 따라 데이터를 분석 및 정리하였고, 유저가 직접 검색을 하여 더 상세한 정보를 참고할 수 있도록 검색 기능도 탑재하였습니다. 
-  -  Home: 전체적인 개요 설명
+  - Home: 전체적인 개요 설명
   - Top Ted 강연: Top/좋아요/조회수를 기준으로 데이터셋을 나타냈음.
   - 연사별 강연내용: 각 연사별로 어떤 강연을 했는지, 몇개나 했는지에 대한 데이터 정리
   - 강연 타이틀 분석: Wordcloud를 이용하여, 어느 키워드가 많이 쓰였는지 정리
@@ -23,9 +23,9 @@
 </br>
 
 - 데이터 셋의 출처는:
-미국의 익명 직장 및 상사 평가 사이트인 글래스도어이며, Data Analyst에 관련한 모집공고의 데이터입니다.
-데이터 출처: https://www.kaggle.com/datasets/ashishjangra27/ted-talks?select=data.csv
-결과물: www.ec2-3-34-129-145.ap-northeast-2.compute.amazonaws.com:8504/
+- 미국의 익명 직장 및 상사 평가 사이트인 글래스도어이며, Data Analyst에 관련한 모집공고의 데이터입니다.
+- 데이터 출처: https://www.kaggle.com/datasets/ashishjangra27/ted-talks?select=data.csv
+- 결과물: www.ec2-3-34-129-145.ap-northeast-2.compute.amazonaws.com:8504/
 
 </br>
 
@@ -65,7 +65,7 @@ AWS EC2에서 보안(방화벽) 항목에서 포트 허용 작업을 했습니�
 ## 작업 환경
 
 - 언어: Python
-- 개발 환경: Anaconda, Visual Studio Code, AWS, Jupyter Notebook
+- 개발 환경: Anaconda, Visual Studio Code, AWS
 - 라이브러리 및 프레임워크: pandas, streamlit, image, matplotlib, plotply, seaborn, WordCloud
 
 </br>
